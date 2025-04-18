@@ -114,8 +114,11 @@
             <span>段落數：{{ f.paragraphs }}</span>
           </div>
           {% if f.keywords %}
-          <div class="mt-2">
-            {% for kw in f.keywords.split("、") %}
+          {% set keywords = f.keywords.split("、") %}
+          {% set visible_keywords = keywords[:5] %}
+          {% set hidden_keywords = keywords[5:] %}
+          <div class="mt-2" title="{% if hidden_keywords %}其他關鍵字：{{ hidden_keywords | join('、') }}{% endif %}">
+            {% for kw in visible_keywords %}
               <span class="badge rounded-pill bg-secondary">{{ kw }}</span>
             {% endfor %}
           </div>
