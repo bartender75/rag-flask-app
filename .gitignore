@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# IDE 設定
+.idea/
+.vscode/
+
+# OS 雜檔
+.DS_Store
+
+# 機密與環境
+.env
+
+# 使用者上傳
+uploads/
+*.db
+*.sqlite3
